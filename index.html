@@ -1,119 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My nginx docker website</title>
     <style>
-        body{
-  background-color: black;
-}
+      body {
+        background-color: rgba(0, 0, 0, 0.173);
+      }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-}
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
 
-.general {
-  width: 100%;
-  height: 100%;
-}
+      .general {
+        width: 100%;
+        height: 100%;
+      }
 
-.val1 {
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
-}
+      .val1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+      }
 
-.val2 {
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
-}
+      .val2 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+      }
 
-.val3 {
-  grid-column: 3 / span 1;
-  grid-row: 1 / span 2;
-}
+      .val3 {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+      }
 
-.val4 {
-  grid-column: 4 / span 1;
-  grid-row: 1 / span 1;
-}
+      .val4 {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 1;
+      }
 
-.val5 {
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 1;
-}
+      .val5 {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+      }
 
-.val6 {
-  grid-column: 4 / span 1;
-  grid-row: 2 / span 2;
-}
+      .val6 {
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 2;
+      }
 
-.val7 {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 2;
-}
+      .val7 {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 2;
+      }
 
-.val8 {
-  grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
-}
+      .val8 {
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 1;
+      }
 
-.val9 {
-  grid-column: 3 / span 2;
-  grid-row: 4 / span 1;
-}
+      .val9 {
+        grid-column: 3 / span 2;
+        grid-row: 4 / span 1;
+      }
 
-@media (min-width: 320px) {
-  .parent {
-    margin: 20px;
-  }
-}
+      @media (min-width: 320px) {
+        .parent {
+          margin: 20px;
+        }
+      }
 
-@media (min-width: 480px) {
-  .parent {
-    margin: 20px 50px;
-  }
-}
+      @media (min-width: 480px) {
+        .parent {
+          margin: 20px 50px;
+        }
+      }
 
-@media (min-width: 600px) {
-  .parent {
-    margin: 50px 150px;
-  }
-}
+      @media (min-width: 600px) {
+        .parent {
+          margin: 50px 150px;
+        }
+      }
 
-@media (min-width: 801px) {
-  .parent {
-    margin: 50px 200px;
-  }
-}
+      @media (min-width: 801px) {
+        .parent {
+          margin: 50px 200px;
+        }
+      }
 
-@media (min-width: 1025px) {
-  .parent {
-    margin: 50px 300px;
-  }
-}
+      @media (min-width: 1025px) {
+        .parent {
+          margin: 50px 300px;
+        }
+      }
     </style>
-
-</head>
-<body>
-
-    <h1 style="color: whitesmoke; text-align: center;">Welcome to my statically hosted image website</h1>
+  </head>
+  <body>
+    <h1 style="color: rgb(221, 204, 204); text-align: center">
+      Welcome to my statically hosted image website
+    </h1>
 
     <div class="parent">
-        <img class="general val1" src="https://cdn.pixabay.com/photo/2023/07/11/17/24/ai-generated-8121001_1280.jpg" />
-        <img class="general val2" src="https://cdn.pixabay.com/photo/2023/08/03/13/49/ai-generated-8167209_640.png" />
-        <img class="general val3" src="https://cdn.pixabay.com/photo/2022/12/03/16/26/crater-7633035_640.png" />
-        <img class="general val4" src="https://cdn.pixabay.com/photo/2023/08/04/08/35/ai-generated-8168687_640.jpg" />
-        <img class="general val5" src="https://cdn.pixabay.com/photo/2023/07/28/12/29/ai-generated-8155175_640.png" />
-        <img class="general val6" src="https://cdn.pixabay.com/photo/2023/02/20/20/44/ai-generated-7803070_640.jpg" />
-        <img class="general val7" src="https://cdn.pixabay.com/photo/2023/07/03/09/36/ai-generated-8103801_1280.jpg" />
-        <img class="general val8" src="https://cdn.pixabay.com/photo/2023/02/17/10/44/ai-generated-7795744_640.jpg" />
-        <img class="general val9" src="https://cdn.pixabay.com/photo/2023/08/03/11/57/ai-generated-8166964_640.jpg" />
-      </div>
-
-    
-</body>
+      <img
+        class="general val1"
+        src="https://cdn.pixabay.com/photo/2023/07/11/17/24/ai-generated-8121001_1280.jpg"
+      />
+      <img
+        class="general val2"
+        src="https://cdn.pixabay.com/photo/2023/08/03/13/49/ai-generated-8167209_640.png"
+      />
+      <img
+        class="general val3"
+        src="https://cdn.pixabay.com/photo/2022/12/03/16/26/crater-7633035_640.png"
+      />
+      <img
+        class="general val4"
+        src="https://cdn.pixabay.com/photo/2023/08/04/08/35/ai-generated-8168687_640.jpg"
+      />
+      <img
+        class="general val5"
+        src="https://cdn.pixabay.com/photo/2023/07/28/12/29/ai-generated-8155175_640.png"
+      />
+      <img
+        class="general val6"
+        src="https://cdn.pixabay.com/photo/2023/02/20/20/44/ai-generated-7803070_640.jpg"
+      />
+      <img
+        class="general val7"
+        src="https://cdn.pixabay.com/photo/2023/07/03/09/36/ai-generated-8103801_1280.jpg"
+      />
+      <img
+        class="general val8"
+        src="https://cdn.pixabay.com/photo/2023/02/17/10/44/ai-generated-7795744_640.jpg"
+      />
+      <img
+        class="general val9"
+        src="https://cdn.pixabay.com/photo/2023/08/03/11/57/ai-generated-8166964_640.jpg"
+      />
+    </div>
+  </body>
 </html>

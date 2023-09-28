@@ -33,3 +33,6 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/nginx_static_page:latest
+
+      - name: deploy
+        run: docker compose -f docker-compose-prod.yml up -d
