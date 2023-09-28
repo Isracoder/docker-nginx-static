@@ -5,7 +5,7 @@ services:
     container_name: static_nginx
     restart: always
     ports:
-      - "8080:80"  # Map host port 8080 to container port 80
+      - "80:80"  # Map host port 8080 to container port 80
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html:r
     
